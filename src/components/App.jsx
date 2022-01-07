@@ -1,6 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../css/reset.css";
+import SignIn from "./SignIn/Signin";
 export default function App(){
     return(
-        <h1>Hello</h1>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<SignIn />}/>
+            </Routes>
+        </BrowserRouter>
+        
     );
 }
+
+//font-family: 'Playball', cursive;  fonte do topo
