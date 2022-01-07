@@ -33,7 +33,7 @@ export default function Inputs ({
         <Form onSubmit={func}>
             {inputs.filter((input, index) => index < qntInputs).map(({type, name}, index) => <Input key={index} type={type} name={name}/>)}
             <Button button={button}/>
-            <StyledLink to="/">{link}</StyledLink>
+            <StyledLink to={button !== "Entrar"? "/": "/cadastro"}>{link}</StyledLink>
         </Form>
     );
 }
