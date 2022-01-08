@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import BlockContext from "../../../../contexts/blockContext";
 import StyledButton from "./styledButton";
 
 export default function Button ({button}){
+    const {block} = useContext(BlockContext);
     return(
-        <StyledButton>{button}</StyledButton>
+        <StyledButton block={block} >{block? "...":button}</StyledButton>
     )
 }

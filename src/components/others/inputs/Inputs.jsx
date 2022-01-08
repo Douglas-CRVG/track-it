@@ -8,32 +8,37 @@ export default function Inputs ({
     func,
     qntInputs,
     button,
-    link
+    link,
+    data,
+    setData
 }){
-
     const inputs = [
         {
-            name: "email",
-            type: "email"
+            placeholder: "email",
+            type: "email",
+            name: "email"
         },
         {
-            name: "senha",
-            type: "password"
+            placeholder: "senha",
+            type: "password",
+            name: "password"
         },
         {
-            name: "nome",
-            type: "text"
+            placeholder: "nome",
+            type: "text",
+            name: "name"
         },
         {
-            name: "foto",
-            type: "url"
+            placeholder: "foto",
+            type: "url",
+            name: "image"
         }
     ];
     return (
         <Form onSubmit={func}>
-            {inputs.filter((input, index) => index < qntInputs).map(({type, name}, index) => <Input key={index} type={type} name={name}/>)}
+            {inputs.filter((input, index) => index < qntInputs).map(({placeholder, type, name}, index) => <Input key={index} placeholder={placeholder} type={type} name={name} data={data} setData={setData} />)}
             <Button button={button}/>
-            <StyledLink to={button !== "Entrar"? "/": "/cadastro"}>{link}</StyledLink>
+            <StyledLink to={button === "Entrar"? "/cadastro" : "/"}>{link}</StyledLink>
         </Form>
     );
 }

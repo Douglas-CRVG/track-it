@@ -1,16 +1,21 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BlockContext from "../contexts/blockContext";
 import "../css/reset.css";
 import Login from "./Login/Login";
-import SignIn from "./SignIn/Signin";
+import SignUp from "./SignUp/SignUp";
 export default function App(){
+    const [block, setBlock] = useState(false);
+
     return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Login />}/>
-                <Route path="/cadastro" element={<SignIn />}/>
-            </Routes>
-        </BrowserRouter>
-        
+        <BlockContext.Provider value={{block, setBlock}}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Login />}/>
+                    <Route path="/cadastro" element={<SignUp />}/>
+                </Routes>
+            </BrowserRouter>
+        </BlockContext.Provider>  
     );
 }
 

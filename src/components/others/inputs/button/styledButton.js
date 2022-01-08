@@ -8,6 +8,7 @@ const StyledButton = styled.button`
     background-color: #52b6ff;
     font-size: 20px;
     color: #FFFFFF;
+    ${(props) => props.block? "pointer-events: none; opacity: 0.7;":""}
 `;
 
 export default StyledButton;

@@ -8,6 +8,7 @@ const StyledInput = styled.input`
     outline: none;
     padding: 11px;
     color: #afafaf;
+    ${(props) => props.block? "pointer-events: none; background-color: #f2f2f2;":""}
 
     ::placeholder{
         color: #dbdbdb;
