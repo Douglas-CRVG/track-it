@@ -4,6 +4,7 @@ import BlockContext from "../contexts/blockContext";
 import "../css/reset.css";
 import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
+import Today from "./Today/Today";
 export default function App(){
     const [block, setBlock] = useState(false);
 
@@ -13,6 +14,7 @@ export default function App(){
                 <Routes>
                     <Route path="/" element={<Login />}/>
                     <Route path="/cadastro" element={<SignUp />}/>
+                    <Route path="/hoje" element={<Today />}/>
                 </Routes>
             </BrowserRouter>
         </BlockContext.Provider>  

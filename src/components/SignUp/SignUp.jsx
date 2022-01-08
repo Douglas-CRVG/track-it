@@ -26,9 +26,9 @@ export default function SignUp() {
             setBlock(false);
             redirectLogin("/", { replace: true });
         })
-        .catch((response)=>{
+        .catch((err)=>{
             setBlock(false);
-            alert("Preencha corretamente os dados para cadastro.")
+            alert("Preencha corretamente os dados para cadastro.");
         });
     }
 

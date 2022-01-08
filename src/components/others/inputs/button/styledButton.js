@@ -8,6 +8,9 @@ const StyledButton = styled.button`
     background-color: #52b6ff;
     font-size: 20px;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ${(props) => props.block? "pointer-events: none; opacity: 0.7;":""}
 `;
 

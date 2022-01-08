@@ -6,6 +6,11 @@ function postSignUp(body){
     return axios.post(`${Url}/auth/sign-up`, body)
 }
 
+function postLogin(body){
+    return axios.post(`${Url}/auth/login`, body)
+}
+
 export {
     postSignUp,
+    postLogin
 }
