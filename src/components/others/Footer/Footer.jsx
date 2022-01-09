@@ -8,7 +8,7 @@ export default function Footer(){
         <StyledFooter>
             <StyledLink to="/">Habitos</StyledLink>
             <Link to="/hoje"><Progress /></Link>
-            <StyledLink to="/hoje">Historico</StyledLink>
+            <StyledLink to="/historico">Historico</StyledLink>
         </StyledFooter>
     )
 }

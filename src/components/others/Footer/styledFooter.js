@@ -10,7 +10,6 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
 `;
 
 export default StyledFooter;
