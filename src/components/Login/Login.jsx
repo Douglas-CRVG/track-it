@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import BlockContext from "../../contexts/blockContext";
 import { postLogin } from "../others/axios/axios";
 import { useNavigate } from "react-router-dom";
+import UserDataContext from "../../contexts/userDataContext";
 
 export default function Login() {
     const [bodyLogin, setBodyLogin] = useState({
@@ -13,6 +14,7 @@ export default function Login() {
     });
 
     const {setBlock} = useContext(BlockContext);
+    const {setUserData} = useContext(UserDataContext);
     const redirectRoute = useNavigate();
 
     function handleLogin(e) {
@@ -20,12 +22,11 @@ export default function Login() {
         setBlock(true)
 
         postLogin(bodyLogin).then((response)=>{
-            console.log(response);
+            setUserData(response.data);
             setBlock(false);
             redirectRoute("/hoje", { replace: true })
         })
         .catch((err)=>{
-            console.log(err.response);
             setBlock(false);
             alert("Preencha corretamente os dados para entrar.");
         });
