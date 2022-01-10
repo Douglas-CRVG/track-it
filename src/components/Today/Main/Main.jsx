@@ -11,8 +11,6 @@ export default function Main(){
 
     const {userData} = useContext(UserDataContext);
 
-    console.log(userData.token);
-
     useEffect(()=>{
         getHabitsToday(userData.token).then((response)=>{
             console.log(response);
@@ -25,7 +23,7 @@ export default function Main(){
     return(
         <StyledMain>
             <Title />
-            {habits.length === 0? <NoHabits>Você não tem nenhum hábito criado. Vá para "Hábitos" para criar.</NoHabits> :<ContainerHabits />}
+            {habits.length === 0? <NoHabits>Você não tem nenhum hábito cadastrado para hoje. Vá para "Hábitos" para criar.</NoHabits> :<ContainerHabits />}
         </StyledMain>
     )
 }

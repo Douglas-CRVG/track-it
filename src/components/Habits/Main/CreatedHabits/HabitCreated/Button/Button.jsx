@@ -2,6 +2,10 @@ import { TrashOutline } from 'react-ionicons'
 import StyledButton from './styledButton'
 
 export default function Button(){
+
+    function deleteHabit(){
+        
+    }
     return(
         <StyledButton onClick={() => alert("tem que excluir")}>
             <TrashOutline

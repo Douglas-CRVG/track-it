@@ -3,11 +3,24 @@ import ContainerCreatedHabits from "./CreatedHabits/ContainerCreatedHabits";
 import Created from "./Created/Created";
 import Title from "./Title/Title";
 import styled from "styled-components";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CreateHabit from "../../../contexts/createHabit";
+import { getListHabits } from "../../others/axios/axios";
+import UserDataContext from "../../../contexts/userDataContext";
 
 export default function Main() {
     const [create, setCreate] = useState(false);
+    const [newHabit, setNewHabit] = useState([]);
+
+    const {userData} = useContext(UserDataContext);
+
+    useEffect(()=>{
+        getListHabits(userData.token).then((response)=>{
+            setNewHabit(response.data);
+        }).catch((err)=>{
+            console.log(err.response);
+        });
+    },[userData.token, create])
 
     return(
         <StyledMain>
@@ -15,10 +28,10 @@ export default function Main() {
                 <Title />
                 {create && <Created />}
             </CreateHabit.Provider>
-            <ContainerCreatedHabits />
+            {newHabit.length>0?<ContainerCreatedHabits newHabit={newHabit} />:
             <NoCreated>
                 Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!
-            </NoCreated>
+            </NoCreated>}
         </StyledMain>
     )
 }

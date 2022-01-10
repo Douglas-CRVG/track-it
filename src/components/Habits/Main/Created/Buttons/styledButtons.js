@@ -8,6 +8,7 @@ const StyledButtons = styled.div`
         all: unset;
         padding: 7px 17px;
         border-radius: 5px;
+        ${(props) => props.block? "pointer-events: none; opacity: 0.7;":""}
     }
 
     button:nth-child(1){

@@ -12,7 +12,6 @@ import Today from "./Today/Today";
 export default function App(){
     const [block, setBlock] = useState(false);
     const [userData, setUserData] = useState();
-    console.log(userData);
 
     return(
         <BlockContext.Provider value={{block, setBlock}}>

@@ -2,7 +2,7 @@ import StyledDay from "./styledDay";
 
 export default function Day({id, day}){
     return (
-        <StyledDay id={id}>
+        <StyledDay bool={id}>
             {day}
         </StyledDay>
     )
