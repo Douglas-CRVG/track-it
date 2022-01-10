@@ -1,10 +1,10 @@
 import StyledSequence from "./styledSequence";
 
-export default function Sequence(){
+export default function Sequence({currentSequence, highestSequence}){
     return(
         <StyledSequence>
-            <p>Sequência atual: <span>4 dias</span></p>
-            <p>Seu recorde: <span>5 dias</span></p>
+            <p>Sequência atual: <span>{currentSequence} dias</span></p>
+            <p>Seu recorde: <span>{highestSequence} dias</span></p>
         </StyledSequence>
     );
 }

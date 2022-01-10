@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import CreateHabit from "../../../../contexts/createHabit";
+import NewHabitContext from "../../../../contexts/newHabitContext";
 import SetHabitContext from "../../../../contexts/setHabitContext";
 import UserDataContext from "../../../../contexts/userDataContext";
 import { getListHabits, postCreateHabit } from "../../../others/axios/axios";
@@ -17,6 +18,7 @@ export default function Created(){
 
     const {userData} = useContext(UserDataContext);
     const {setCreate} = useContext(CreateHabit);
+    const {newHabit, setNewHabit} = useContext(NewHabitContext);
 
     function getInput(e) {
         setInput(e.target.value);
@@ -37,6 +39,7 @@ export default function Created(){
                 console.log(err.response);
             });
             setCreate(false);
+            setNewHabit([...newHabit])
             /*getListHabits(userData.token).then((response)=>{
                 console.log(response.data);
             }).catch((err)=>{

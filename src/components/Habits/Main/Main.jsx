@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import CreateHabit from "../../../contexts/createHabit";
 import { getListHabits } from "../../others/axios/axios";
 import UserDataContext from "../../../contexts/userDataContext";
+import NewHabitContext from "../../../contexts/newHabitContext";
 
 export default function Main() {
     const [create, setCreate] = useState(false);
@@ -23,16 +24,18 @@ export default function Main() {
     },[userData.token, create])
 
     return(
-        <StyledMain>
-            <CreateHabit.Provider value={{create, setCreate}}>
-                <Title />
-                {create && <Created />}
-            </CreateHabit.Provider>
-            {newHabit.length>0?<ContainerCreatedHabits newHabit={newHabit} />:
-            <NoCreated>
-                Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!
-            </NoCreated>}
-        </StyledMain>
+        <NewHabitContext.Provider value={{newHabit, setNewHabit}}>
+            <StyledMain>
+                <CreateHabit.Provider value={{create, setCreate}}>
+                    <Title />
+                    {create && <Created />}
+                </CreateHabit.Provider>
+                {newHabit.length>0?<ContainerCreatedHabits newHabit={newHabit} />:
+                <NoCreated>
+                    Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!
+                </NoCreated>}
+            </StyledMain>
+        </NewHabitContext.Provider>
     )
 }
 

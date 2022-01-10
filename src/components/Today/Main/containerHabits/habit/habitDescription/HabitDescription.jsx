@@ -1,11 +1,11 @@
 import Sequence from "./sequence/Sequence";
 import StyledDescription from "./styledDescription";
 
-export default function HabitDescription() {
+export default function HabitDescription({name, currentSequence, highestSequence}) {
     return(
         <StyledDescription>
-            <h1>Ler 1 capítulo de livro</h1>
-            <Sequence />
+            <h1>{name}</h1>
+            <Sequence currentSequence={currentSequence} highestSequence={highestSequence} />
         </StyledDescription>
     )
 }

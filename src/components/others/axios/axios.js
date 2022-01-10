@@ -22,10 +22,15 @@ function getListHabits(token){
     return axios.get(`${Url}/habits`, { headers: { Authorization: `Bearer ${token}` } });
 }
 
+function deleteHabit(id, token){
+    return axios.post(`${Url}/habits/${id}`, { headers: { Authorization: `Bearer ${token}` } });
+}
+
 export {
     postSignUp,
     postLogin,
     getHabitsToday,
     postCreateHabit,
-    getListHabits
+    getListHabits,
+    deleteHabit
 };
