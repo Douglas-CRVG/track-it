@@ -20,11 +20,11 @@ export default function Main(){
         .catch((err)=>{
             console.log(err.response);
         })
-    },[userData.token]);
+    },[userData.token, ]);
 
     return(
         <StyledMain>
-            <Title />
+            <Title habits={habits}/>
             <HabitsContext.Provider value={{habits, setHabits}}>
                 {habits.length === 0? <NoHabits>Você não tem nenhum hábito cadastrado para hoje. Vá para "Hábitos" para criar.</NoHabits> : <ContainerHabits habits={habits} />}
             </HabitsContext.Provider>

@@ -5,8 +5,8 @@ import StyledHabit from "./styledHabit";
 export default function Habit({id, name, done, currentSequence, highestSequence}){
     return(
         <StyledHabit>
-            <HabitDescription name={name} currentSequence={currentSequence} highestSequence={highestSequence} />
-            <Button />
+            <HabitDescription done={done} name={name} currentSequence={currentSequence} highestSequence={highestSequence} />
+            <Button id={id} done={done}/>
         </StyledHabit>
     )
 }

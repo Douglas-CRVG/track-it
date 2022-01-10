@@ -16,4 +16,11 @@ const StyledTitle = styled.div`
     }
 `;
 
-export default StyledTitle;
+const StyledSpan = styled.span`
+    color: #8FC549;
+`;
+
+export{
+    StyledTitle,
+    StyledSpan
+}

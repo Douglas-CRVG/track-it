@@ -40,11 +40,6 @@ export default function Created(){
             });
             setCreate(false);
             setNewHabit([...newHabit])
-            /*getListHabits(userData.token).then((response)=>{
-                console.log(response.data);
-            }).catch((err)=>{
-                console.log(err.response);
-            });*/
         }else{
             setTimeout(()=>{
                 setBlock(false);
