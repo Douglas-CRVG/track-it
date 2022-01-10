@@ -5,8 +5,6 @@ import StyledHeader from "./styledHeader";
 export default function Header(){
     const {userData} = useContext(UserDataContext);
 
-    console.log(userData);
-
     return(
         <StyledHeader>
             <h1>TrackIt</h1>

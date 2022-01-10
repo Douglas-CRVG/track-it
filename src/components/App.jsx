@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BlockContext from "../contexts/blockContext";
 import UserDataContext from "../contexts/userDataContext";
 import "../css/reset.css";
+import Habits from "./Habits/Habits";
 import Historic from "./Historic/Historic";
 import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
@@ -22,6 +23,7 @@ export default function App(){
                         <Route path="/cadastro" element={<SignUp />}/>
                         <Route path="/hoje" element={<Today />}/>
                         <Route path="/historico" element={<Historic />} />
+                        <Route path="/habitos" element={<Habits />} />
                     </Routes>
                 </BrowserRouter>
             </UserDataContext.Provider>

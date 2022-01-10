@@ -6,9 +6,9 @@ import styled from "styled-components";
 export default function Footer(){
     return(
         <StyledFooter>
-            <StyledLink to="/">Habitos</StyledLink>
+            <StyledLink to="/habitos">Hábitos</StyledLink>
             <Link to="/hoje"><Progress /></Link>
-            <StyledLink to="/historico">Historico</StyledLink>
+            <StyledLink to="/historico">Histórico</StyledLink>
         </StyledFooter>
     )
 }
