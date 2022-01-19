@@ -1,4 +1,31 @@
-# Getting Started with Create React App
+# TRACK IT
+#### Uma aplicação de rastreamento de hábitos visando aprimorar a sua rotina.
+where to find https://driven-track-it.vercel.app/
+<br></br>
+## **ABOUT**
+#### Aqui podemos fazer o cadastro de nossos hábitos e acompanhar diariamente com quais nos comprometemos para o dia corrente. Podendo controlar o que já temos feito e o que ainda nos resta realizar.
+<br></br>
+## **TECHNOLOGIES**
+#### - CSS
+#### - HTML
+#### - JAVASCRIPT
+#### - REACT
+#### - STYLED COMPONENTS
+#### - API
+<br></br>
+## **HOW TO RUN**
+### **CLONE**
+#### git clone https://github.com/Douglas-CRVG/Driven-TrackIt.git
+### **INSTALL DEPENDECIES**
+#### npm install
+### RUN
+#### npm start
+
+
+
+
+
+<!--# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +95,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->
